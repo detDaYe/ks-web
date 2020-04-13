@@ -16,9 +16,9 @@ public class Student {
 
     private String email;
 
-    private long phoneNo;
+    private String phoneNo;
 
-    public Student(String name, String email, long phoneNo) {
+    public Student(String name, String email, String phoneNo) {
         this.name = name;
         this.email = email;
         this.phoneNo = phoneNo;
@@ -43,11 +43,11 @@ public class Student {
         this.name = name;
     }
 
-    public long getPhoneNo() {
+    public String getPhoneNo() {
         return phoneNo;
     }
 
-    public void setPhoneNo(long phoneNo) {
+    public void setPhoneNo(String phoneNo) {
         this.phoneNo = phoneNo;
     }
 
