@@ -15,6 +15,9 @@ public class Person {
     private String email;
     private String phoneNo;
 
+    public Person(){
+    }
+    
     public Person(String name, String job, String email, String phoneNo) {
         this.name = name;
         this.job = job;

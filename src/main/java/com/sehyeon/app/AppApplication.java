@@ -33,10 +33,10 @@ public class AppApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		personRepsitory.save(new Person("박세현", "보안", "hello@test.com", "010-1234-5678"));
 		socialMediaRepository.save(new SocialMedia("anonymous", "anonymous", "anonymous", ""));
-		interestsRepository.save(new Interests("X-Plane 11"));
-		interestsRepository.save(new Interests("VATSIM"));
-		skillRepository.save(new Skill("Algebra", -10));
-		skillRepository.save(new Skill("Cryptography", 99));
+		interestsRepository.save(new Interests("Interest-1"));
+		interestsRepository.save(new Interests("Interest-2"));
+		skillRepository.save(new Skill("Algebra", 3));
+		skillRepository.save(new Skill("Cryptography", 6));
 		workRepository.save(new Work("Student", "KYU", "4 year", "nothing"));
 	}
 }
