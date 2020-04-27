@@ -2,7 +2,6 @@ package com.sehyeon.app.controller;
 
 import com.sehyeon.app.entity.*;
 import com.sehyeon.app.repository.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,21 +12,17 @@ import java.util.List;
 public class IndexController {
 
     private final PersonRepsitory personRepsitory;
+    private final SocialMediaRepository socialMediaRepository;
+    private final  InterestsRepository interestsRepository;
+    private final SkillRepository skillRepository;
+    private  final WorkRepository workRepository;
 
-    @Autowired
-    private SocialMediaRepository socialMediaRepository;
-
-    @Autowired
-    private InterestsRepository interestsRepository;
-
-    @Autowired
-    private SkillRepository skillRepository;
-
-    @Autowired
-    private WorkRepository workRepository;
-
-    public IndexController(PersonRepsitory personRepsitory) {
+    public IndexController(PersonRepsitory personRepsitory, SocialMediaRepository socialMediaRepository, InterestsRepository interestsRepository, SkillRepository skillRepository, WorkRepository workRepository) {
         this.personRepsitory = personRepsitory;
+        this.socialMediaRepository = socialMediaRepository;
+        this.interestsRepository = interestsRepository;
+        this.skillRepository = skillRepository;
+        this.workRepository = workRepository;
         System.out.println("repository!");
     }
 
