@@ -2,7 +2,6 @@ package com.sehyeon.app;
 
 import com.sehyeon.app.entity.*;
 import com.sehyeon.app.repository.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,18 +10,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AppApplication implements CommandLineRunner {
 
 	private final PersonRepsitory personRepsitory;
+	private final SocialMediaRepository socialMediaRepository;
+	private final InterestsRepository interestsRepository;
+	private final SkillRepository skillRepository;
+	private final WorkRepository workRepository;
 
-	@Autowired
-	private SocialMediaRepository socialMediaRepository;
-	@Autowired
-	private InterestsRepository interestsRepository;
-	@Autowired
-	private SkillRepository skillRepository;
-	@Autowired
-	private WorkRepository workRepository;
-
-	public AppApplication(PersonRepsitory personRepsitory) {
+	public AppApplication(PersonRepsitory personRepsitory, SocialMediaRepository socialMediaRepository, InterestsRepository interestsRepository, SkillRepository skillRepository, WorkRepository workRepository) {
 		this.personRepsitory = personRepsitory;
+		this.socialMediaRepository = socialMediaRepository;
+		this.interestsRepository = interestsRepository;
+		this.skillRepository = skillRepository;
+		this.workRepository = workRepository;
 	}
 
 	public static void main(String[] args) {
