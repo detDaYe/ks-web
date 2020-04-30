@@ -35,6 +35,6 @@ public class AppApplication implements CommandLineRunner {
 		interestsRepository.save(new Interests("Interest-2"));
 		skillRepository.save(new Skill("Algebra", 3));
 		skillRepository.save(new Skill("Cryptography", 6));
-		workRepository.save(new Work("Student", "KYU", "4 year", "nothing"));
+		workRepository.save(new Work("Student", "KYU", "4 year", "학부생활"));
 	}
 }

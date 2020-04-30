@@ -27,7 +27,6 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(Model model){
-        //System.out.println("IndexController.java index());
         Person person = personRepsitory.findAll().stream().findFirst().orElse(null);
         SocialMedia socialMedia = socialMediaRepository.findAll().stream().findFirst().orElse(null);
 
