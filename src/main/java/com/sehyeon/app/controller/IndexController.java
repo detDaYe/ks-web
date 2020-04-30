@@ -23,7 +23,7 @@ public class IndexController {
         this.interestsRepository = interestsRepository;
         this.skillRepository = skillRepository;
         this.workRepository = workRepository;
-        System.out.println("repository!");
+        //System.out.println("repository!");
     }
 
     @GetMapping("/")
